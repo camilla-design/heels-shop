@@ -1,0 +1,1 @@
+export const API_URL = "https://heals-shop-strapi.herokuapp.com";

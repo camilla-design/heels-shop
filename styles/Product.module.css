@@ -1,0 +1,116 @@
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .containerCard {
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .card {
+    margin: 2rem;
+    flex-basis: 45%;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+  }
+  
+  .card:hover,
+  .card:focus,
+  .card:active {
+    color: #0070f3;
+    border-color: #0070f3;
+  }
+  
+  .card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  .logo {
+    height: 1em;
+  }
+
+  .description {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .price {
+    color: #2d9b87;
+  }
+
+  .priceDescription {
+    color: #282828;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  .cart {
+    margin-top: 30px;
+    background: black;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+
+  .favorite {
+    margin-top: 20px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 8px;
+  }
+
+  .buttons {
+    margin-top: 50px;
+  }
+  
+  .qty {
+    display: flex;
+    align-items: center;
+  }
+
+  .add, .minus {
+    padding: 6px;
+    margin: 8px 16px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+
+  .add {
+    border: 1px solid #282828;
+    cursor: pointer;
+  }
+
+  .minus {
+    margin-left: 0;
+              background: #dfdfdf;
+              color: black;
+  }

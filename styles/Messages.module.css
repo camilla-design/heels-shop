@@ -1,0 +1,19 @@
+.message {
+    position: relative;
+    border-left: 0.5px solid var(--color-secondary);
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 1280px) {
+    .message {
+        width: 450px;
+    }
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    text-align: center;
+}
