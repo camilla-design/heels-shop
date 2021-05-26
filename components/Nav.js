@@ -1,12 +1,9 @@
 import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
 
-const Nav = () => {
+function Nav() {
   return (
     <nav className={navStyles.nav}>
-      <ul>
-        <li className={navStyles.logo}>HEALS</li>
-      </ul>
       <ul>
         <li>
           <Link href="/">Home</Link>
@@ -17,6 +14,7 @@ const Nav = () => {
         <li>
           <Link href="/adminLogin">Admin</Link>
         </li>
+        hei
       </ul>
     </nav>
   );

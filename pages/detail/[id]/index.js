@@ -31,7 +31,10 @@ const fadeInUp = {
   }
 };
 
+
+
 const product = ({ product }) => {
+
   return (
     <>
       <Head>
@@ -62,7 +65,8 @@ const product = ({ product }) => {
             <span className={productStyle.priceDescription}>Price: {product.price}$</span>
             </div>
             <div className={productStyle.buttons}>
-            <a className={productStyle.cart} href="">Add To Cart</a>
+            <button className={productStyle.cart} >Add To Cart</button>
+            
             </div>
           </div>
         </div>
