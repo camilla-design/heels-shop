@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASE_URL_FETCHDATA;
+const baseUrl = "http://localhost:3000";
 
 export const getData = async (url, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {

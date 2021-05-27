@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
 
-
-
+const MONGODB_URL = "mongodb+srv://user:Noroff2021@cluster0.gufgl.mongodb.net/userData?retryWrites=true&w=majority";
 const connectDB = () => {
   if (mongoose.connections[0].readyState) {
     console.log("Already connected.");
     return;
   }
   mongoose.connect(
-    process.env.MONGODB_URL,
+    MONGODB_URL,
     {
       useCreateIndex: true,
       useFindAndModify: false,
