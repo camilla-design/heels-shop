@@ -1,12 +1,12 @@
-import toast from "../styles/Toast.module.css";
+import toastStyle from "../styles/Toast.module.css";
 
 const Toast = ({ msg, handleShow }) => {
   return (
-    <div className={toast.toast}>
-      <div className={toast.toastHeader}>
-        <strong className={toast.strong}>{msg.title}</strong>
+    <div className={toastStyle.toast}>
+      <div className={toastStyle.toastHeader}>
+        <strong className={toastStyle.strong}>{msg.title}</strong>
         <button
-          className={toast.close}
+          className={toastStyle.close}
           onClick={handleShow}
           id="myBtn"
           data-dismiss="toast"
@@ -14,7 +14,7 @@ const Toast = ({ msg, handleShow }) => {
           X
         </button>
       </div>
-      <div className={toast.toastBody}>{msg.msg}</div>
+      <div className={toastStyle.toastBody}>{msg.msg}</div>
     </div>
   );
 };

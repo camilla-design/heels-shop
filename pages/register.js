@@ -3,36 +3,38 @@ import formStyle from "../styles/Form.module.css";
 import styles from "../styles/Layout.module.css";
 import Link from "next/link";
 import { useState, useContext } from "react";
-import valid from '../utils/valid';
-import { DataContext } from '../store/GlobalState';
+import valid from "../utils/valid";
+import { DataContext } from "../store/GlobalState";
+import { postData } from "../utils/fetchData";
 
 function Register() {
   const initialState = {
     name: "",
     email: "",
     password: "",
-    confirmed_password: "",
+    cf_password: "",
   };
   const [userData, setUserData] = useState(initialState);
-  const { name, email, password, confirmed_password } = userData;
+  const { name, email, password, cf_password } = userData;
 
   const [state, dispatch] = useContext(DataContext);
 
   const handleChangeInput = (event) => {
     const { name, value } = event.target;
     setUserData({ ...userData, [name]: value });
+    dispatch({ type: "NOTIFY", payload: {} });
   };
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const errMsg = valid(name, email, password, confirmed_password)
+    const errMsg = valid(name, email, password, cf_password)
     if(errMsg) return dispatch({ type: 'NOTIFY', payload: {error: errMsg} })
 
     dispatch({ type: 'NOTIFY', payload: {loading: true} })
-    
-    if(res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
 
-    return dispatch({ type: 'NOTIFY', payload: {success: res.msg} })
+    const res = await postData('./auth/register', userData)
+    
+    console.log(res);
   }
 
   return (
@@ -52,7 +54,9 @@ function Register() {
               type="name"
               placeholder="name"
               id="name"
-              name="name" value={name} onChange={handleChangeInput}
+              name="name"
+              value={name}
+              onChange={handleChangeInput}
             />
             <lable>Email</lable>
             <input
@@ -60,7 +64,9 @@ function Register() {
               type="email"
               id="email"
               placeholder="Email adress"
-              name="email" value={email} onChange={handleChangeInput}
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
             />
             <lable>Confirm Password</lable>
             <input
@@ -68,15 +74,19 @@ function Register() {
               type="password"
               placeholder="Password"
               id="password"
-              name="password" value={password} onChange={handleChangeInput}
+              name="password"
+              value={password}
+              onChange={handleChangeInput}
             />
             <lable>Password</lable>
             <input
               className={formStyle.input}
               type="password"
               placeholder="Repeat your password"
-              id="confirmed_password"
-              name="confirmed_password" value={confirmed_password} onChange={handleChangeInput}
+              id="password2"
+              name="cf_password"
+              value={cf_password}
+              onChange={handleChangeInput}
             />
             <button className={formStyle.btn} type="submit">
               Register
