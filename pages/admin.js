@@ -1,7 +1,6 @@
 import Head from "next/head";
 
 function Admin() {
-
   return (
     <>
       <Head>

@@ -10,63 +10,71 @@ let easing = [0.6, -0.05, 0.01, 0.99];
 const stagger = {
   animate: {
     transition: {
-      staggerChildren: 0.05
-    }
-  }
+      staggerChildren: 0.05,
+    },
+  },
 };
 
 const fadeInUp = {
   initial: {
     y: 60,
     opacity: 0,
-    transition: { duration: 0.6, ease: easing }
+    transition: { duration: 0.6, ease: easing },
   },
   animate: {
     y: 0,
     opacity: 1,
     transition: {
       duration: 0.6,
-      ease: easing
-    }
-  }
+      ease: easing,
+    },
+  },
 };
 
-
-
 const product = ({ product }) => {
-
   return (
     <>
       <Head>
         <title>Product</title>
       </Head>
-      <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }} className={styles.containerProducts}>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit={{ opacity: 0 }}
+        className={styles.containerProducts}
+      >
         <div className={styles.flex}>
           <motion.div
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }} className={styles.containerProductImage}>
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            className={styles.containerProductImage}
+          >
             <motion.img
-            animate={{ x: 0, opacity: 1 }}
-            initial={{ x: 200, opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ delay: 0.2 }} src={`${product.image[0].url}`} width="300" />
+              animate={{ x: 0, opacity: 1 }}
+              initial={{ x: 200, opacity: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.2 }}
+              src={`${product.image[0].url}`}
+              width="300"
+            />
           </motion.div>
           <div className={styles.descriptionContainer}>
-          <Link href="/">
+            <Link href="/">
               <a>Go back</a>
             </Link>
             <h1>{product.title}</h1>
             <p className={productStyle.description}>{product.description}</p>
             <div className={productStyle.qty}>
-                <div className={productStyle.minus}>-</div>
-                <div className={productStyle.amount}>1</div>
-                <div className={productStyle.add}>+</div>
-              
-            <span className={productStyle.priceDescription}>Price: {product.price}$</span>
+              <div className={productStyle.minus}>-</div>
+              <div className={productStyle.amount}>1</div>
+              <div className={productStyle.add}>+</div>
+
+              <span className={productStyle.priceDescription}>
+                Price: {product.price}$
+              </span>
             </div>
             <div className={productStyle.buttons}>
-            <button className={productStyle.cart} >Add To Cart</button>
-            
+              <button className={productStyle.cart}>Add To Cart</button>
             </div>
           </div>
         </div>

@@ -58,7 +58,11 @@ function AdminLogin() {
             onChange={(e) => setPassword(e.target.value)}
             value={password}
           />
-          <button className={formStyle.btn} type="button" onClick={() => handleLogin()}>
+          <button
+            className={formStyle.btn}
+            type="button"
+            onClick={() => handleLogin()}
+          >
             Login
           </button>
         </form>

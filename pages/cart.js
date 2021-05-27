@@ -1,13 +1,8 @@
 import Head from "next/head";
 import { API_URL } from "./api/API";
-import {useState} from 'react';
-
-
-
+import { useState } from "react";
 
 function Cart() {
-
-
   return (
     <>
       <Head>
@@ -15,7 +10,6 @@ function Cart() {
       </Head>
       <div>
         <h1>This is your cart</h1>
-        
       </div>
     </>
   );

@@ -19,25 +19,25 @@ function Register() {
 
   const [state, dispatch] = useContext(DataContext);
 
-  const handleChangeInput = e => {
+  const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
     dispatch({ type: "NOTIFY", payload: {} });
   };
 
-  const handleSubmit = async e => {
-    e.preventDefault()
-    const errMsg = valid(name, email, password, cf_password)
-    if(errMsg) return dispatch({ type: 'NOTIFY', payload: {error: errMsg} })
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const errMsg = valid(name, email, password, cf_password);
+    if (errMsg) return dispatch({ type: "NOTIFY", payload: { error: errMsg } });
 
-    dispatch({ type: 'NOTIFY', payload: {loading: true} })
+    dispatch({ type: "NOTIFY", payload: { loading: true } });
 
-    const res = await postData('auth/register', userData)
-    if(res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
+    const res = await postData("auth/register", userData);
+    if (res.err)
+      return dispatch({ type: "NOTIFY", payload: { error: res.err } });
 
-    return dispatch({ type: 'NOTIFY', payload: {success: res.mgs} })
-    
-  }
+    return dispatch({ type: "NOTIFY", payload: { success: res.mgs } });
+  };
 
   return (
     <>

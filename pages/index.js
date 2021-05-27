@@ -10,16 +10,15 @@ export default function Home({ products }) {
       <Head>
         <title>Heals shop</title>
       </Head>
-      <div >
+      <div>
         <img className={styles.heroImage} src="/hero-image.jpg" width={375} />
       </div>
-      
+
       <div className={styles.wrapper}>
-      
-      <Header />
-  
+        <Header />
+
         <ProductList products={products} />
-        </div>
+      </div>
     </>
   );
 }

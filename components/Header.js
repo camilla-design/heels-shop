@@ -3,12 +3,10 @@ import navStyles from "../styles/Nav.module.css";
 
 const Header = () => {
   return (
-      <>
-    <div className={headerStyles.title}>
-      <h1>
-        Welcome to
-      </h1>
-      <h2 className={navStyles.logo}>Heals shop</h2>
+    <>
+      <div className={headerStyles.title}>
+        <h1>Welcome to</h1>
+        <h2 className={navStyles.logo}>Heals shop</h2>
       </div>
 
       <p className={headerStyles.description}>

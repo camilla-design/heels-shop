@@ -13,13 +13,13 @@ const Notify = () => {
       {notify.error && (
         <Toast
           msg={{ msg: notify.error, title: "Error" }}
-          handleShow={() => dispatch({ type: 'NOTIFY', payload: {} })}
+          handleShow={() => dispatch({ type: "NOTIFY", payload: {} })}
         />
       )}
       {notify.success && (
         <Toast
           msg={{ msg: notify.success, title: "Succeed" }}
-          handleShow={() => dispatch({ type: 'NOTIFY', payload: {} })}
+          handleShow={() => dispatch({ type: "NOTIFY", payload: {} })}
         />
       )}
     </>

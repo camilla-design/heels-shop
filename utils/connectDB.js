@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-let MONGODB_URL = "mongodb+srv://user:Noroff2021@cluster0.gufgl.mongodb.net/userData?retryWrites=true&w=majority";
+let MONGODB_URL =
+  "mongodb+srv://user:Noroff2021@cluster0.gufgl.mongodb.net/userData?retryWrites=true&w=majority";
 
 const connectDB = () => {
   if (mongoose.connections[0].readyState) {
@@ -15,7 +16,7 @@ const connectDB = () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     },
-    err => {
+    (err) => {
       if (err) throw err;
       console.log("Connected to mongodb.");
     }
