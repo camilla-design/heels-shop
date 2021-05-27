@@ -19,8 +19,8 @@ function Register() {
 
   const [state, dispatch] = useContext(DataContext);
 
-  const handleChangeInput = (event) => {
-    const { name, value } = event.target;
+  const handleChangeInput = e => {
+    const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
     dispatch({ type: "NOTIFY", payload: {} });
   };
@@ -33,8 +33,10 @@ function Register() {
     dispatch({ type: 'NOTIFY', payload: {loading: true} })
 
     const res = await postData('auth/register', userData)
+    if(res.err) return dispatch({ type: 'NOTIFY', payload: {error: res.err} })
+
+    return dispatch({ type: 'NOTIFY', payload: {success: res.mgs} })
     
-    console.log(res);
   }
 
   return (
