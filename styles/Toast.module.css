@@ -1,0 +1,29 @@
+.toast {
+    width: 250px;
+    border: 1px solid black;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 9;
+}
+
+.toastHeader {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 8px;
+}
+
+.toastBody {
+    padding: 8px;
+}
+
+.strong {
+    font-weight: bold;
+    color: var(--color-tertiary);
+}
+
+.close {
+    border: none;
+    font-size: 12px;
+}
