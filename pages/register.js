@@ -95,7 +95,7 @@ function Register() {
             </button>
             <p>
               You already have an accout?{" "}
-              <Link href="/login">
+              <Link href="/signin">
                 <a className={formStyle.register}>Login Now</a>
               </Link>
             </p>
