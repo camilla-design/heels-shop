@@ -1,4 +1,4 @@
-const baseUrl = "https://heels-shop.vercel.app";
+const baseUrl = "http://localhost:3000";
 
 export const getData = async (url, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {

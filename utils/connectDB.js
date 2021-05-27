@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-let MONGODB_URL =
-  "mongodb+srv://user:Noroff2021@cluster0.gufgl.mongodb.net/userData?retryWrites=true&w=majority";
+
 
 const connectDB = () => {
   if (mongoose.connections[0].readyState) {
@@ -9,7 +8,7 @@ const connectDB = () => {
     return;
   }
   mongoose.connect(
-    MONGODB_URL,
+    env.proccess.MONGODB_URL,
     {
       useCreateIndex: true,
       useFindAndModify: false,
