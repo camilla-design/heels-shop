@@ -32,7 +32,7 @@ function Register() {
 
     dispatch({ type: 'NOTIFY', payload: {loading: true} })
 
-    const res = await postData('./auth/register', userData)
+    const res = await postData('auth/register', userData)
     
     console.log(res);
   }

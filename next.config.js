@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    "BASE_URL": "https://heels-shop.vercel.app",
+    "BASE_URL": "http://localhost:3000",
     "MONGODB_URL": "mongodb+srv://user:Noroff2021@cluster0.gufgl.mongodb.net/userData?retryWrites=true&w=majority",
   }
 };

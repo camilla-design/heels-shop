@@ -13,10 +13,9 @@ export const getData = async (url, token) => {
 };
 
 export const postData = async (url, post, token) => {
-    const res = await fetch(`${baseUrl}/api/${url}`, {
+    const res = await fetch(`/api/${url}`, {
       method: "POST",
       headers: {
-        Accept: 'application/json',
         "Content-Type": "application/json",
         'Authorization': token
       },
@@ -31,7 +30,6 @@ export const putData = async (url, post, token) => {
   const res = await fetch(`${baseUrl}/api/${url}`, {
     method: "PUT",
     headers: {
-        Accept: 'application/json',
       "Content-Type": "application/json",
       'Authorization': token
     },
