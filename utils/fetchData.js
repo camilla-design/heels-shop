@@ -33,7 +33,6 @@ export const putData = async (url, post, token) => {
       "Content-Type": "application/json",
       'Authorization': token
     },
-    responseType:'json',
     body: JSON.stringify(post),
   });
 
