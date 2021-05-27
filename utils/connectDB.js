@@ -8,7 +8,7 @@ const connectDB = () => {
     return;
   }
   mongoose.connect(
-    env.proccess.MONGODB_URL,
+    process.env.MONGODB_URL,
     {
       useCreateIndex: true,
       useFindAndModify: false,
