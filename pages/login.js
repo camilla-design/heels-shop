@@ -5,16 +5,16 @@ import Link from "next/link";
 import { API_URL } from "./api/API";
 import { useState } from "react";
 
-function SignIn() {
+function login() {
   return (
     <>
       <Head>
-        <title>Signin Page</title>
+        <title>login Page</title>
       </Head>
       <div>
         <div className={styles.container}>
           <h1>Login</h1>
-          You need to login to access this page
+          If you dont have an login account, you can make one by clicking on the register now button
           <div></div>
           <form className={formStyle.container}>
             <input
@@ -43,4 +43,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default login;
