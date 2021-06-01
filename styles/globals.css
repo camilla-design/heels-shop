@@ -14,7 +14,6 @@ a {
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
   --color-error: #D63031;
   --color-success: #00B894;
   --color-tertiary: #00B894;

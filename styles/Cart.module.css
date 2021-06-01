@@ -2,3 +2,68 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.dFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.margin {
+    margin-right: 8px;
+}
+
+.quantity {
+    color: var(--color-tertiary);
+}
+
+.quantityBtn {
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    background: white;
+    
+}
+
+.quantityBtn:hover {
+    color: var(--color-tertiary);
+}
+
+.delete {
+    color: rgb(194, 65, 65);
+}
+
+.heading {
+    text-transform: uppercase;
+    color: rgb(109, 108, 108);
+    font-size: 26px;
+}
+
+.formContainer {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.total {
+    margin-bottom: 25px;
+}
+
+.payment {
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    background: var(--color-tertiary);
+    color: black;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.payment:hover {
+    color: var(--color-tertiary);
+}
