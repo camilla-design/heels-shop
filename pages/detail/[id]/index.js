@@ -4,6 +4,9 @@ import styles from "../../../styles/Layout.module.css";
 import productStyle from "../../../styles/Product.module.css";
 import { API_URL } from "../../api/API";
 import { motion } from "framer-motion";
+import { addToCart } from "../../../store/Actions";
+import { useContext } from "react";
+import { DataContext } from "../../../store/GlobalState";
 
 let easing = [0.6, -0.05, 0.01, 0.99];
 
@@ -32,6 +35,8 @@ const fadeInUp = {
 };
 
 const product = ({ product }) => {
+  const { state, dispatch } = useContext(DataContext);
+  const { cart } = state;
   return (
     <>
       <Head>
@@ -64,17 +69,17 @@ const product = ({ product }) => {
             </Link>
             <h1>{product.title}</h1>
             <p className={productStyle.description}>{product.description}</p>
-            <div className={productStyle.qty}>
-              <div className={productStyle.minus}>-</div>
-              <div className={productStyle.amount}>1</div>
-              <div className={productStyle.add}>+</div>
 
-              <span className={productStyle.priceDescription}>
-                Price: {product.price}$
-              </span>
-            </div>
+            <span className={productStyle.priceDescription}>
+              Price: {product.price}$
+            </span>
             <div className={productStyle.buttons}>
-              <button className={productStyle.cart}>Add To Cart</button>
+              <button
+                className={productStyle.cart}
+                onClick={() => dispatch(addToCart(product, cart))}
+              >
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>
