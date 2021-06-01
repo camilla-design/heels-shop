@@ -35,7 +35,7 @@ function Nav() {
             <Link href="/adminLogin">
               <a>Admin</a>
             </Link>
-            <Link href="/signin">
+            <Link href="/login">
               <a>Login</a>
             </Link>
           </div>
