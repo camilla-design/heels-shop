@@ -2,10 +2,11 @@ import Head from "next/head";
 import formStyle from "../styles/Form.module.css";
 import styles from "../styles/Layout.module.css";
 import Link from "next/link";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import valid from "../utils/valid";
 import { DataContext } from "../store/GlobalState";
 import { postData } from "../utils/fetchData";
+import { useRouter } from "next/router";
 
 function Register() {
   const initialState = {
@@ -18,6 +19,9 @@ function Register() {
   const { name, email, password, cf_password } = userData;
 
   const { state, dispatch } = useContext(DataContext);
+  const { auth } = state;
+
+  const router = useRouter();
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -38,6 +42,10 @@ function Register() {
 
     return dispatch({ type: "NOTIFY", payload: { success: res.mgs } });
   };
+
+  useEffect(() => {
+    if (Object.keys(auth).length !== 0) router.push("/login");
+  }, [auth]);
 
   return (
     <>

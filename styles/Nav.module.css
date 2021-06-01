@@ -43,7 +43,7 @@
 .dropbtn {
     color: var(--color-tertiary);
     padding: 8px;
-    font-size: 12px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
@@ -76,6 +76,16 @@
 
   .notActive {
       font-weight: normal;
+  }
+
+  .logoutBtn {
+    color: var(--color-tertiary);
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    background: white;
   }
 
 
