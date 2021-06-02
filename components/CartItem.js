@@ -15,7 +15,7 @@ const CartItem = ({ item, dispatch, cart }) => {
       <td>
         <h3 className={cartStyle.margin}>
           <Link href={`/detail/${item.id}`}>
-            <a>{item.title}</a>
+            <a className={cartStyle.title}>{item.title}</a>
           </Link>
         </h3>
         <h4 className={cartStyle.quantity}>${item.quantity * item.price}</h4>
@@ -30,7 +30,7 @@ const CartItem = ({ item, dispatch, cart }) => {
           {" "}
           -{" "}
         </button>
-        <span>{item.quantity}</span>
+        <span className={cartStyle.quantityBtn}>{item.quantity}</span>
         <button
           className={cartStyle.quantityBtn}
           onClick={() => dispatch(increase(cart, item.id))}

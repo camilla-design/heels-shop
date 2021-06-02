@@ -5,13 +5,14 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 700px;
-    margin-top: 3rem;
+    margin-top: 18px;
     text-align: center;
   }
 
   .containerCard {
     width: 300px;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
   }
   
   .card {
@@ -19,7 +20,8 @@
     flex-basis: 45%;
     text-align: center;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
+    
   }
   
   .card:hover,
@@ -28,8 +30,13 @@
     color: #0070f3;
     border-color: #0070f3;
   }
+
+  .title {
+    font-size: 18px;
+    text-transform: uppercase !important;
+  }
   
-  .card h3 {
+  .card  {
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
   }

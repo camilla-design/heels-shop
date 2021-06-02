@@ -7,10 +7,16 @@
   .title,
   .description {
     text-align: center;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
   }
   
   .description {
     line-height: 1.5;
     font-size: 1.5rem;
+  }
+
+  .logo {
+    color: var(--color-tertiary);
+    font-family: 'Pattaya', sans-serif;
+    font-size: 70px;
   }

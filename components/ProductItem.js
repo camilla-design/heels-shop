@@ -50,10 +50,10 @@ const ProductItem = ({ product }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <h4>{product.title}</h4>
+            <h4 className={productStyle.title}>{product.title}</h4>
             <p>
               <img src="/star-regular.svg" width="20" />
-              {product.rates}
+               {product.rates}
             </p>
             <p className={productStyle.price}>${product.price}</p>
           </motion.div>
