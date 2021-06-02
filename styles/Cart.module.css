@@ -9,6 +9,12 @@
     flex-direction: column;
 }
 
+@media (min-width: 800px) {
+    .dFlex {
+        flex-direction: row;
+    }
+}
+
 .container {
     margin-top: 40px;
 }

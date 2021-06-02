@@ -24,18 +24,18 @@ function ContactForm() {
       <h1>Contact</h1>
       <h3>Got any question?</h3>
 
-      <Form onSubmit={handleSubmit} className={FormStyle.container}>
-        <Form.Label>Name</Form.Label>
+      <form onSubmit={handleSubmit} className={FormStyle.container}>
+        <label>Name</label>
 
-        <Form.Control
+        <input
           className={FormStyle.input}
           id="name"
           name="name"
           placeholder="Your Name"
         />
-        <Form.Label>Email Adress</Form.Label>
+        <label>Email Adress</label>
 
-        <Form.Control
+        <input
           className={FormStyle.input}
           id="email"
           type="email"
@@ -44,8 +44,8 @@ function ContactForm() {
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-        <Form.Label>Message</Form.Label>
-        <Form.Control
+        <lable>Message</lable>
+        <input
           className={FormStyle.textarea}
           as="textarea"
           rows={3}
@@ -59,14 +59,14 @@ function ContactForm() {
           errors={state.errors}
         />
 
-        <Button
+        <button
           className={FormStyle.btn}
           type="submit"
           disabled={state.submitting}
         >
           Submit
-        </Button>
-      </Form>
+        </button>
+      </form>
     </>
   );
 }
