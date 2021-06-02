@@ -7,7 +7,6 @@ import CartItem from "../components/CartItem";
 import CartSummary from "../components/CartSummary";
 import Form from "react-bootstrap/Form";
 import FormStyle from "../styles/Form.module.css";
-import {getData} from '../utils/fetchData';
 
 function Cart() {
   const { state, dispatch } = useContext(DataContext);
@@ -24,7 +23,6 @@ function Cart() {
     };
     getTotal();
   }, [cart]);
-
 
   if (cart.length === 0)
     return (
