@@ -59,9 +59,8 @@ const login = () => {
       <div>
         <div className={styles.container}>
           <h1>Login</h1>
-          If you dont have an login account, you can make one by clicking on the
-          register now button
-          <div></div>
+          <p>If you dont have an login account, you can make one by clicking on the
+          register now button</p>
           <form className={formStyle.container} onSubmit={handleSubmit}>
             <input
               className={formStyle.input}
