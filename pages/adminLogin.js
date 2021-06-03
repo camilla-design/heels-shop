@@ -37,10 +37,10 @@ function AdminLogin() {
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>Admin</title>
       </Head>
       <div className={styles.container}>
-        <h1>Login</h1>
+        <h1>Admin</h1>
         You need to login to access this page
         <div></div>
         <form className={formStyle.container}>
