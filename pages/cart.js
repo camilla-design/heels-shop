@@ -80,7 +80,7 @@ function Cart() {
               href={auth.user ? "/" : "/login"}
             >
               <a className={cartStyle.payment}>
-                <i class="far fa-credit-card"></i> Chackout
+                <i class="far fa-credit-card"></i> Checkout
               </a>
             </Link>
           </Form>
