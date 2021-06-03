@@ -77,7 +77,7 @@ function Cart() {
             </h3>
             <Link
               className={cartStyle.payment}
-              href={auth.user ? "#" : "/login"}
+              href={auth.user ? "/" : "/login"}
             >
               <a className={cartStyle.payment}>
                 <i class="far fa-credit-card"></i> Chackout
