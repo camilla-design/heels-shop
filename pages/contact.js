@@ -1,9 +1,6 @@
 import Head from "next/head";
-
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import FormStyle from "../styles/Form.module.css";
 
 function ContactForm() {
